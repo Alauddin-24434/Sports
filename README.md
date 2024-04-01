@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a is a web application built with Next.js, Tailwind CSS, and TypeScript
 
 ## Live Link: https://sports-smoky.vercel.app
 ## Getting Started
