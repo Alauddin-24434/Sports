@@ -4,7 +4,7 @@ import Collection from "@/components/Collection/Collection";
 import Banner from "@/components/Banner/Banner";
 
 export default function Landing() {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('dark');
 
   // Function to toggle the theme
   const toggleTheme = () => {
