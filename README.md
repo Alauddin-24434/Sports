@@ -7,8 +7,7 @@ Before run must install node :
 npm i 
 # or
 npm install
-# or
-yarn add
+
 
 First, run the development server:
 
