@@ -4,7 +4,8 @@ import Image, { StaticImageData } from 'next/image';
 import playerImage1 from '../../../public/image/banner/Ticket_Mockup 3.png';
 import playerImage2 from '../../../public/image/banner/unnamed 1.png';
 import playerImage3 from '../../../public/image/banner/Ticket_Mockup 3.png';
-
+import { IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowBack } from "react-icons/io";
 // Define the type for a player
 type Player = {
     id: number;
@@ -61,9 +62,9 @@ const Collection = ({ theme }: any) => {
 
             {/* Description for the collection */}
             <p className={`text-center my-4 text-xs md:text-[14px] px-10 md:px-0 lg:px-0 ${theme === 'light' ? 'text-black' : 'text-white'}`}>Discover extraordinary moments with our Spotlight Collection metatickets—exclusive access to premium events for an unforgettable experience. Grab yours today</p>
-            
+
             {/* Grid layout for displaying players */}
-            <div className="grid gap-8 sm:flex sm:flex-wrap justify-center">
+            <div className="relative grid gap-8 sm:flex sm:flex-wrap justify-center border">
                 {/* Map through each player and render their information */}
                 {players.map(player => (
                     <div key={player.id} className={`relative my-8 w-[257px] h-[624px] shadow-2xl ${theme === 'light' ? 'bg-white shadow-lg' : 'bg-[#818A97]'}`}>
@@ -100,7 +101,15 @@ const Collection = ({ theme }: any) => {
                         </div>
                     </div>
                 ))}
+                {/* Vertically centering spans */}
+                <div className="absolute left-7  hidden lg:block md:left-24 lg:left-24 py-2 border border-blue-500  top-1/2 transform -translate-y-1/2">
+                    <span className='h-1/2 text-blue-500 font-bold text-2xl '><IoIosArrowBack/></span>
+                </div>
+                <div className="absolute hidden lg:block py-2 border border-blue-500 right-7 md:right-24 lg:right-24  top-1/2 transform -translate-y-1/2">
+                    <span className='h-1/2 text-blue-500 font-bold text-2xl'><IoIosArrowForward/></span>
+                </div>
             </div>
+
         </div>
     );
 };
