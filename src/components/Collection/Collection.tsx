@@ -64,7 +64,7 @@ const Collection = ({ theme }: any) => {
             <p className={`text-center my-4 text-xs md:text-[14px] px-10 md:px-0 lg:px-0 ${theme === 'light' ? 'text-black' : 'text-white'}`}>Discover extraordinary moments with our Spotlight Collection metatickets—exclusive access to premium events for an unforgettable experience. Grab yours today</p>
 
             {/* Grid layout for displaying players */}
-            <div className="relative grid gap-8 sm:flex sm:flex-wrap justify-center border">
+            <div className="relative grid gap-8 sm:flex sm:flex-wrap justify-center ">
                 {/* Map through each player and render their information */}
                 {players.map(player => (
                     <div key={player.id} className={`relative my-8 w-[257px] h-[624px] shadow-2xl ${theme === 'light' ? 'bg-white shadow-lg' : 'bg-[#818A97]'}`}>
@@ -95,7 +95,7 @@ const Collection = ({ theme }: any) => {
                         </div>
                         {/* Button */}
                         <div className='w-full flex justify-center absolute bottom-5'>
-                            <button className={`bg-black text-white py-2 px-4 ${theme === 'light' ? 'hover:bg-gray-800' : 'hover:bg-gray-300'}`}>
+                            <button className={`bg-black text-white py-2 px-4 text-sm ${theme === 'light' ? 'hover:bg-gray-800' : 'hover:bg-gray-300'}`}>
                                 {player.button}
                             </button>
                         </div>
