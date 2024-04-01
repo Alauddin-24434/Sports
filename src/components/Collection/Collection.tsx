@@ -16,7 +16,7 @@ type Player = {
     button: string;
 };
 
-const Collection = ({theme}) => {
+const Collection = ({theme}:any) => {
 
     // Define the players data
     const players: Player[] = [
@@ -52,28 +52,23 @@ const Collection = ({theme}) => {
         },
     ];
 
-    // Function to toggle the theme
- 
-
- 
 
 
- 
     return (
         <div className={`max-w-7xl  mx-auto ${theme === 'light' ? 'bg-[#F9F8FF] ' : 'bg-[#18282A] '}`}>
-            <h1 className={`text-3xl mt-6 text-center font-bold text-white ${theme === 'light' ? 'text-black ' : 'text-white '}`}>Collection Spotlight</h1>
-            <p className={`text-center my-4 text-white ${theme === 'light' ? 'text-black ' : 'text-white '}`}>Discover extraordinary moments with our Spotlight Collection <br />metatickets—exclusive access to premium events for an unforgettable experience. Grab yours today</p>
-            <div className="grid gap-8 sm:flex sm:flex-wrap justify-center">
+            <h1 className={`text-lg md:text-3xl pt-6  text-center font-bold  ${theme === 'light' ? 'text-black ' : 'text-white '}`}>Collection Spotlight</h1>
+            <p className={`text-center my-4 text-xs md:text-[14px] px-10 md:px-0 lg:px-0 ${theme === 'light' ? 'text-black ' : 'text-white '}`}>Discover extraordinary moments with our Spotlight Collection metatickets—exclusive access to premium events for an unforgettable experience. Grab yours today</p>
+            <div className="grid gap-8  sm:flex sm:flex-wrap justify-center">
                 {players.map(player => (
-                    <div key={player.id} className={`relative my-8 w-[257px] h-[624px]   shadow-sm ${theme === 'light' ? 'bg-white shadow-2xl ' : 'bg-[#818A97] '}`}>
+                    <div key={player.id} className={`relative my-8 w-[257px] h-[624px]   shadow-2xl ${theme === 'light' ? 'bg-white shadow-lg ' : 'bg-[#818A97] '}`}>
                         {/* Content for each player */}
                         <div className="flex mt-4 justify-center">
                             <Image src={player.image} alt={player.title} className="object-cover w-[226px] h-[401px] rounded-lg" />
                         </div>
                         <div className='flex '>
-                            <span className={`w-6 h-6 absolute -left-3 rounded-full bg-slate-950 ${theme === 'light' ? 'bg-[#F9F8FF] text-[#F9F8FF]' : 'bg-[#18282A] text-[#18282A]'}`}>bo</span>
+                            <span className={`w-6 h-6 absolute -left-3 rounded-full  ${theme === 'light' ? 'bg-[#F9F8FF]  text-[#F9F8FF]' : 'bg-[#18282A] text-[#18282A]'}`}>bo</span>
                             <span className='ml-7'>--------------------------</span>
-                            <span  className={`w-6 h-6 absolute -right-3 rounded-full bg-slate-950 ${theme === 'light' ? 'bg-[#F9F8FF] text-[#F9F8FF] ' : 'bg-[#18282A] text-[#18282A]'}`}>bo</span>
+                            <span  className={`w-6 h-6 absolute -right-3 rounded-full ${theme === 'light' ? 'bg-[#F9F8FF] text-[#F9F8FF] ' : 'bg-[#18282A] text-[#18282A]'}`}>bo</span>
                         </div>
                         <div className='flex flex-col items-center lg:flex lg:items-center '>
                             <h2 className={`text-lg font-bold ${theme === 'light' ? 'text-black' : 'text-white'}`}>{player.title}</h2>

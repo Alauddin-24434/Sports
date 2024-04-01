@@ -23,10 +23,11 @@ export default function Landing() {
 
   return (
     <main className={`${theme === 'light' ? 'bg-[#F9F8FF] ' : 'bg-[#292B32]'}`}>
+      
       <Banner theme={theme}/>
       <Collection theme={theme}  />
       {/* Toggle button for theme */}
-      <button className="fixed bottom-4 right-4 p-2 rounded-full bg-gray-200 text-gray-800" onClick={toggleTheme}>
+      <button className="fixed bottom-4 right-4 p-2 mt-8 md:mt-0 lg:mt-0 mr-5 md:mr-0 rounded-full bg-gray-200 text-gray-800" onClick={toggleTheme}>
         {theme === 'light' ? '🌙' : '☀️'}
       </button>
     </main>

@@ -18,7 +18,7 @@ type Player = {
     sport: string;
 };
 
-const Banner = ({theme}) => {
+const Banner = ({theme}:any) => {
 
   
 
@@ -65,7 +65,7 @@ const Banner = ({theme}) => {
 
     return (
         <div className={`max-w-7xl mx-auto  ${theme === 'light' ? 'text-black' : 'text-white '}`}>
-            <h1 className="text-lg mb-3 ml-3 font-bold underline">
+            <h1 className="text-lg py-2  ml-10 md:ml-3 lg:ml-3 font-bold underline">
             Sports
             </h1>
             <div className="grid gap-4  sm:flex sm:flex-wrap justify-center ">
@@ -82,13 +82,13 @@ const Banner = ({theme}) => {
                         <div className='flex flex-col  items-center lg:flex lg:items-start'>
                             {player.title ? (
                                 <>
-                                    <h2 className="text-md my-1 font-bold">{player.title}</h2>
-                                    <p className="text-sm ">{player.desc}</p>
+                                    <h2 className="text-lg my-1 font-bold">{player.title}</h2>
+                                    <p className="text-xs px-10 md:px-0 lg:px-0  text-center md:text-start lg:text-justify ">{player.desc}</p>
                                 </>
                             ) : (
                                 <>
                                     <h2 className="text-md my-1 font-bold">{player.name}</h2>
-                                    <div className={`flex justify-evenly shadow-2xl items-center w-full  gap-8 ${theme === 'light' ? 'bg-[#F9F8FF] ' : 'bg-[#292B32] '}`}>
+                                    <div className={`flex justify-evenly shadow-md items-center  w-56 md:w-full lg:w-full   gap-8 ${theme === 'light' ? 'bg-[#F9F8FF] ' : 'bg-[#292B32] '}`}>
                                         <span className='flex flex-col'>
                                             <h6 className="text-xs">Total Events</h6>
                                             <p className="text-xs"> {player.totalEvents} Events</p>
