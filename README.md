@@ -2,6 +2,13 @@ This is a is a web application built with Next.js, Tailwind CSS, and TypeScript
 
 ## Live Link: https://sports-smoky.vercel.app
 ## Getting Started
+Before run must install node :
+```bash
+npm i 
+# or
+npm install
+# or
+yarn add
 
 First, run the development server:
 
